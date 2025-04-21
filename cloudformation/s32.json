@@ -4,7 +4,7 @@
         "S3Bucket": {
             "Type": "AWS::S3::Bucket",
             "Properties": {
-                "BucketName" : "bucket_for_chart2",
+                "BucketName" : "bucket-for-chart2",
                 "PublicAccessBlockConfiguration": {
                     "BlockPublicAcls": false,
                     "BlockPublicPolicy": false,
