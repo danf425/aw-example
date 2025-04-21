@@ -1,0 +1,27 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Resources": {
+        "S3Bucket": {
+            "Type": "AWS::S3::Bucket",
+            "Properties": {
+                "BucketName" : "bucket-for-chart4"
+            }
+        }
+    },
+    "Outputs": {
+        "portnumber": {
+            "Value": 80,
+            "Description": "Name of S3 bucket helmvalue1"
+        },
+        "replicacount": {
+            "Value": "3",
+            "Description": "Name of S3 bucket helmvalue2"
+        },
+        "valuesoutput3": {
+            "Value": "helmvalue3",
+            "Description": "Name of S3 bucket helmvalue3"
+        }
+
+    }
+
+}
