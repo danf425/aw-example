@@ -5,7 +5,17 @@
             "Type": "AWS::S3::Bucket",
             "Properties": {
                 "BucketName" : "bucket-for-chart2"
-            }
+            },
+                "Tags": [
+                  {
+                    "Key": "Name",
+                    "Value": "bucket-for-chart2"
+                  },
+                  {
+                    "Key": "StackName",
+                    "Value": "stack-for-chart2"
+                  }
+                ]
         }
     },
     "Outputs": {
