@@ -14,17 +14,7 @@
                 "WebsiteConfiguration": {
                     "IndexDocument": "index.html",
                     "ErrorDocument": "error.html"
-                },
-                "Tags": [
-                  {
-                    "Key": "Name",
-                    "Value": "bucket-for-chart1"
-                  },
-                  {
-                    "Key": "StackName",
-                    "Value": "stack-for-chart1"
-                  }
-                ]
+                }
             },
             "DeletionPolicy": "Retain",
             "UpdateReplacePolicy": "Retain"
