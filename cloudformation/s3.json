@@ -1,4 +1,4 @@
-"s3chart1" {
+"s3chart1": {
     "AWSTemplateFormatVersion": "2010-09-09",
     "Resources": {
         "S3Bucket": {
