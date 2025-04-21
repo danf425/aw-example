@@ -11,8 +11,7 @@ image:
 
 service:
   type: ClusterIP
-  port: 80
-
+  port: <+serviceVariables.cloudformationPortNumber>
 ingress:
   enabled: false
   annotations: {}
