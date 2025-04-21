@@ -34,7 +34,7 @@
             "Description": "Name of S3 bucket helmvalue1"
         },
         "replicacount": {
-            "Value": "1",
+            "Value": "3",
             "Description": "Name of S3 bucket helmvalue2"
         },
         "valuesoutput3": {
