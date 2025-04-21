@@ -4,32 +4,11 @@
         "S3Bucket": {
             "Type": "AWS::S3::Bucket",
             "Properties": {
-                "BucketName" : "bucket-for-chart2",
-                "PublicAccessBlockConfiguration": {
-                    "BlockPublicAcls": false,
-                    "BlockPublicPolicy": false,
-                    "IgnorePublicAcls": false,
-                    "RestrictPublicBuckets": false
-                },
-                "WebsiteConfiguration": {
-                    "IndexDocument": "index.html",
-                    "ErrorDocument": "error.html"
-                }
-            },
-            "DeletionPolicy": "Retain",
-            "UpdateReplacePolicy": "Retain"
-        },
+                "BucketName" : "bucket-for-chart2"
+            }
+        }
     },
     "Outputs": {
-        "WebsiteURL": {
-            "Value": {
-                "Fn::GetAtt": [
-                    "S3Bucket",
-                    "WebsiteURL"
-                ]
-            },
-            "Description": "URL for website hosted on S3"
-        },
         "portnumber": {
             "Value": 80,
             "Description": "Name of S3 bucket helmvalue1"
@@ -41,24 +20,8 @@
         "valuesoutput3": {
             "Value": "helmvalue3",
             "Description": "Name of S3 bucket helmvalue3"
-        },
-        "S3BucketSecureURL": {
-            "Value": {
-                "Fn::Join": [
-                    "",
-                    [
-                        "https://",
-                        {
-                            "Fn::GetAtt": [
-                                "S3Bucket",
-                                "DomainName"
-                            ]
-                        }
-                    ]
-                ]
-            },
-            "Description": "Name of S3 bucket to hold website content"
         }
+
     }
 
 }
