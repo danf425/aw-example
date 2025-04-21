@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "helm-2.fullname" . }}
+ # name: {{ .Values.fullname }}
+  labels:
+    app: {{ template "helm-2.name" . }}
+    chart: {{ template "helm-2.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    app: {{ template "helm-2.name" . }}
+    release: {{ .Release.Name }}
